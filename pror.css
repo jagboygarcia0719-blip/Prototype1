@@ -1,0 +1,110 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+      rgba(0, 33, 71, 0.9),
+      rgba(0, 45, 98, 0.95)
+  );
+}
+
+/* App Container */
+.app {
+  width: 100%;
+  max-width: 380px;
+  height: 100vh;
+  max-height: 700px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 25px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.screen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 25px;
+  box-sizing: border-box;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.4s ease-in-out;
+  color: white;
+}
+
+.screen.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+h2 {
+  text-align: center;
+  font-weight: 600;
+}
+
+.label {
+  text-align: center;
+  color: rgba(255,255,255,0.7);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.2s;
+}
+
+button:hover {
+  transform: scale(1.03);
+}
+
+.category {
+  background: #0d6efd;
+  color: white;
+}
+
+.call {
+  width: 80px;
+  float: right;
+  background: #dc3545;
+  color: white;
+}
+
+.end {
+  background: black;
+  color: white;
+  margin-top: 40px;
+}
+
+.contact {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+  overflow: auto;
+}
+
+.center {
+  margin-top: 180px;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .app {
+    border-radius: 0;
+    height: 100vh;
+    max-height: 100vh;
+  }
+}

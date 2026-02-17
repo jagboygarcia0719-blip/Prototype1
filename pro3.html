@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>School Emergency App</title>
+
+<link rel="stylesheet" href="pror.css">
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- Screen 1: Home -->
+  <div id="home" class="screen active">
+    <h2>School Emergency Contacts</h2>
+    <p class="label">Select a department</p>
+
+    <button class="category" onclick="goToContacts('School Security','0999-111-2222')">
+      School Security
+    </button>
+
+    <button class="category" onclick="goToContacts('Clinic / Nurse','0999-333-4444')">
+      Clinic / Nurse
+    </button>
+
+    <button class="category" onclick="goToContacts('Guidance Office','0999-555-6666')">
+      Guidance Office
+    </button>
+
+    <button class="category" onclick="goToContacts('Principal','0999-777-8888')">
+      Principal
+    </button>
+  </div>
+
+  <!-- Screen 2 -->
+  <div id="contacts" class="screen">
+    <h2 id="categoryTitle"></h2>
+    <p class="label">Tap to call</p>
+
+    <div class="contact">
+      <span id="contactNumber"></span>
+      <button class="call" onclick="startCall()">Call</button>
+    </div>
+  </div>
+
+  <!-- Screen 3 -->
+  <div id="calling" class="screen">
+    <div class="center">
+      <h2 id="callingText"></h2>
+      <p class="label">Assistance is on the way</p>
+      <button class="end" onclick="goHome()">End Call</button>
+    </div>
+  </div>
+
+</div>
+
+<script src="prorr.js"></script>
+
+</body>
+</html>
